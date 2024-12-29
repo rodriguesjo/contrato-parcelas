@@ -6,47 +6,64 @@ import java.util.List;
 
 public class Contract {
 
-	private Integer number;
-	private LocalDate date;
-	private Double totalValue;
-	
-	private List<Installment> installments = new ArrayList<>();
-	
-	public Contract() {		
-	}
+    // Número identificador do contrato
+    private Integer number;
 
-	public Contract(Integer number, LocalDate date, Double totalValue) {		
-		this.number = number;
-		this.date = date;
-		this.totalValue = totalValue;
-	}
+    // Data em que o contrato foi firmado
+    private LocalDate date;
 
-	public Integer getNumber() {
-		return number;
-	}
+    // Valor total do contrato
+    private Double totalValue;
 
-	public void setNumber(Integer number) {
-		this.number = number;
-	}
+    // Lista de parcelas associadas ao contrato
+    private List<Installment> installments = new ArrayList<>();
 
-	public LocalDate getDate() {
-		return date;
-	}
+    // Construtor padrão, necessário para instanciar objetos sem definir atributos iniciais
+    public Contract() {        
+    }
 
-	public void setDate(LocalDate date) {
-		this.date = date;
-	}
+    // Construtor que permite inicializar o contrato com número, data e valor total
+    public Contract(Integer number, LocalDate date, Double totalValue) {        
+        this.number = number;
+        this.date = date;
+        this.totalValue = totalValue;
+    }
 
-	public Double getTotalValue() {
-		return totalValue;
-	}
+    // Retorna o número do contrato
+    public Integer getNumber() {
+        return number;
+    }
 
-	public void setTotalValue(Double totalValue) {
-		this.totalValue = totalValue;
-	}
+    // Define o número do contrato
+    public void setNumber(Integer number) {
+        this.number = number;
+    }
 
-	public List<Installment> getInstallments() {
-		return installments;
-	}	
-	
+    // Retorna a data do contrato
+    public LocalDate getDate() {
+        return date;
+    }
+
+    // Define a data do contrato
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    // Retorna o valor total do contrato
+    public Double getTotalValue() {
+        return totalValue;
+    }
+
+    // Define o valor total do contrato
+    public void setTotalValue(Double totalValue) {
+        this.totalValue = totalValue;
+    }
+
+    // Retorna a lista de parcelas associadas ao contrato
+    public List<Installment> getInstallments() {
+        return installments;
+    }    
+    
+    // Nota: não há setter para 'installments' porque a manipulação da lista é feita diretamente
+    // usando métodos como add(), remove(), etc., garantindo maior controle sobre os dados.
 }
